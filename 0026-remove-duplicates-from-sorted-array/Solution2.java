@@ -8,6 +8,14 @@ public class Solution2 {
         int[] uniqueElements = new int[n];
         int index = 0;
 
+        /** The following nested loop works this way:
+         * I take the first element as duplicate
+         * and assign it to the unique array only when
+         * I find number other than duplicate variable
+         * then after assignment to unique, I assign to i a new value
+         * so that in the next outer iteration i begins with our new value
+         * kinda with new duplicate value other than the previous, good luck!
+         */
         for(int i = 0; i < arr.length; i++){
             int duplicate = arr[i];
             for(int j = i + 1; j < arr.length; j++){
